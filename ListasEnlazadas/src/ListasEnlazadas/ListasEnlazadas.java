@@ -33,7 +33,22 @@ public class ListasEnlazadas
 		Temporal.Siguiente=Primero; //corre al primero
 		Primero=Temporal;   //lo coloca de primero
 	}
-        
+        public int localizar(int bsq){
+            
+            int k=0;
+            Nodo aux=Primero;
+            while (aux!=null)
+        {
+                    k+=1;
+                    if(aux.info==bsq)
+                        bsq=k;
+                    aux=aux.Siguiente;
+        }
+                
+                
+            return bsq;
+            
+        }
 	public void borrarPrimero()
 	{
 		Primero=Primero.Siguiente;

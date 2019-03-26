@@ -17,7 +17,9 @@ public class Inicio {
      * @param args the command line arguments
      */
     public static void main(String[] args) { 
-        int op1 = 0;
+        int ingre, busqued;
+        
+        
         
         Scanner sc = new Scanner(System.in);
         ListasEnlazadas miLista=new ListasEnlazadas();
@@ -26,11 +28,17 @@ public class Inicio {
         
         for  ( int i = 0; i< num;i++ ){
          System.out.print("Ingrese numero " +(i+1)+  ":   ");   
-         op1 = sc.nextInt();
-          miLista.InsertarEnPrimero(op1);
+         ingre = sc.nextInt();
+          miLista.InsertarEnPrimero(ingre);
         }
+        System.out.print("Ingrese el numero que desea buscar:   ");
+        busqued = sc.nextInt();
+          System.out.println("El numero esta en la posicion:  " + miLista.localizar(busqued));
+        
+        
         System.out.println(miLista.Listar());
        	System.out.println("Borrar");
+        
         miLista.borrarUltimo();
         miLista.borrarPrimero();
 	
