@@ -80,16 +80,15 @@ public class ListasEnlazadas
 	{
 		Nodo anterior=Primero;
 		Nodo actual=Primero;
-		int k=0;
-                int j = 1;
+		int k =0;               
+                
 		if (pos>0)
 		{
 			while (k!=pos && actual.Siguiente != null)
 			{
 				anterior=actual;
-				actual=actual.Siguiente;
+				actual=actual.Siguiente;				
 				k++;
-				System.out.println("      "+(j+1)+":"+k);
 			}
 			anterior.Siguiente=actual.Siguiente;
 		}
