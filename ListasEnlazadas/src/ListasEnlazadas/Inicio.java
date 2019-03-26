@@ -17,7 +17,7 @@ public class Inicio {
      * @param args the command line arguments
      */
     public static void main(String[] args) { 
-        int ingre, busqued;
+        int ingre, busqued, posic;
         
         
         
@@ -31,18 +31,19 @@ public class Inicio {
          ingre = sc.nextInt();
           miLista.InsertarEnPrimero(ingre);
         }
-        System.out.print("Ingrese el numero que desea buscar:   ");
-        busqued = sc.nextInt();
-          System.out.println("El numero esta en la posicion:  " + miLista.localizar(busqued));
+//        System.out.print("Ingrese el numero que desea buscar:   ");
+//        busqued = sc.nextInt();
+//        System.out.println("El numero esta en la posicion:  " + miLista.locali(busqued));
         
-        
-        System.out.println(miLista.Listar());
-       	System.out.println("Borrar");
-        
-        miLista.borrarUltimo();
-        miLista.borrarPrimero();
-	
-	System.out.println(miLista.Listar());
+          System.out.print("Ingrese la posicion que desea borrar:   ");
+          posic = sc.nextInt();
+           miLista.borrarPosicion(posic);
+//           System.out.println(miLista.Listar());
+//        
+//        System.out.println("Borrar");
+//        miLista.borrarUltimo();
+//        miLista.borrarPrimero();
+//	System.out.println(miLista.Listar());
 
     }
     

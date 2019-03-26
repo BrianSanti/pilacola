@@ -29,11 +29,12 @@ public class ListasEnlazadas
 	}
 	public void InsertarEnPrimero(int Dato)
 	{
+            
 		Nodo Temporal=new Nodo(Dato); //Crea el nodo temporal
 		Temporal.Siguiente=Primero; //corre al primero
 		Primero=Temporal;   //lo coloca de primero
 	}
-        public int localizar(int bsq){
+        public int locali(int bsq){
             
             int k=0;
             Nodo aux=Primero;
@@ -80,6 +81,7 @@ public class ListasEnlazadas
 		Nodo anterior=Primero;
 		Nodo actual=Primero;
 		int k=0;
+                int j = 1;
 		if (pos>0)
 		{
 			while (k!=pos && actual.Siguiente != null)
@@ -87,7 +89,7 @@ public class ListasEnlazadas
 				anterior=actual;
 				actual=actual.Siguiente;
 				k++;
-				System.out.println("K       "+k);
+				System.out.println("      "+(j+1)+":"+k);
 			}
 			anterior.Siguiente=actual.Siguiente;
 		}
