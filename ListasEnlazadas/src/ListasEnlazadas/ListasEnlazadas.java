@@ -12,6 +12,7 @@ package ListasEnlazadas;
 public class ListasEnlazadas
 {
     	Nodo Primero;
+    String InsertarEnPrimero;
 	public ListasEnlazadas()
 	{
 		Primero=null;
@@ -32,6 +33,7 @@ public class ListasEnlazadas
 		Temporal.Siguiente=Primero; //corre al primero
 		Primero=Temporal;   //lo coloca de primero
 	}
+        
 	public void borrarPrimero()
 	{
 		Primero=Primero.Siguiente;
