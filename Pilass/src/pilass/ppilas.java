@@ -7,6 +7,8 @@ public class ppilas {
    private int tamaño;
     private int[] capacidad;
     private int top;
+     private int ext;
+     
     
     ppilas(int s) {
      tamaño = s;
@@ -25,6 +27,19 @@ public class ppilas {
     public boolean vacio() {
        return (top == -1);
     }
+    public void vaciar(int s){
+    tamaño = s;
+    capacidad = new int[tamaño];
+    System.out.println("Pila vaciada");
+    
+    }
+     public void insert(int j) { 
+     tamaño = (tamaño + ext);
+     capacidad[++top] = j;
+     
+       
+    }
+    
 
   
 
